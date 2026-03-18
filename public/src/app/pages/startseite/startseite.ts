@@ -1,11 +1,11 @@
-import { Component, inject } from '@angular/core';
+import { Component, HostListener, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatCardModule } from '@angular/material/card';
-import { MatMenuModule } from '@angular/material/menu';
 import { MatListModule } from '@angular/material/list';
+import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 
 type LinkItem = {
@@ -23,7 +23,7 @@ type LinkItem = {
     MatButtonModule,
     MatIconModule,
     MatCardModule,
-    MatMenuModule,
+    MatSidenavModule,
     MatListModule,
     MatSnackBarModule,
   ],
@@ -34,6 +34,7 @@ export class Startseite {
   private readonly snackBar = inject(MatSnackBar);
 
   title = 'GT-Driver e.V.';
+  showScrollTop = false;
 
   communityLinks: LinkItem[] = [
     { label: 'Forum (DE)', url: 'https://forum.3000gt.org', icon: 'forum' },
@@ -67,6 +68,15 @@ export class Startseite {
     'Sandra Grunow (Schriftführerin)',
     'Jens Kuschrank (Finanzen)',
   ];
+
+  @HostListener('window:scroll')
+  onWindowScroll(): void {
+    this.showScrollTop = window.scrollY > 260;
+  }
+
+  scrollToTop(): void {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
 
   async copyEmail(event: Event): Promise<void> {
     event.preventDefault();
