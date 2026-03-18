@@ -1,0 +1,226 @@
+<mat-toolbar class="topnav" role="navigation">
+  <div class="container topnav__inner">
+    <div class="topnav__desktop-links">
+      <a mat-button href="#fahrzeug">Fahrzeug</a>
+      <a mat-button href="#verein">Verein</a>
+      <a mat-button href="#mitgliedschaft">Mitgliedschaft</a>
+      <a mat-button href="#links">Links</a>
+      <a mat-button href="#kontakt">Kontakt</a>
+    </div>
+    <button
+      mat-icon-button
+      class="topnav__menu-btn"
+      [matMenuTriggerFor]="mobileMenu"
+      aria-label="Menü öffnen"
+    >
+      <mat-icon>menu</mat-icon>
+    </button>
+    <mat-menu #mobileMenu="matMenu">
+      <a mat-menu-item href="#fahrzeug">Fahrzeug</a>
+      <a mat-menu-item href="#verein">Verein</a>
+      <a mat-menu-item href="#mitgliedschaft">Mitgliedschaft</a>
+      <a mat-menu-item href="#links">Links</a>
+      <a mat-menu-item href="#kontakt">Kontakt</a>
+    </mat-menu>
+  </div>
+</mat-toolbar>
+<header class="hero">
+  <div class="container hero__content">
+    <div class="hero__text">
+      <p class="eyebrow">Willkommen auf der Homepage von</p>
+      <div class="hero__title-row">
+        <h1>{{ title }}</h1>
+      </div>
+
+      <div class="hero__actions">
+        <div class="hero__buttons">
+          <a mat-flat-button href="#verein" class="hero__btn-primary">Über den Verein</a>
+          <a mat-stroked-button href="#mitgliedschaft" class="hero__btn-secondary"
+            >Mitglied werden</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <mat-card class="hero__card">
+      <mat-card-title>Auf einen Blick</mat-card-title>
+      <mat-card-content>
+        <p>
+          Der Verein unterstützt Besitzer und Fans des Mitsubishi 3000GT, 3000GT Spyder und Dodge
+          Stealth.
+        </p>
+        <ul>
+          <li>Erhalt und Pflege der Fahrzeuge</li>
+          <li>Treffen, Austausch und Unterstützung</li>
+          <li>Know-how, Teile und Dokumentation</li>
+        </ul>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</header>
+
+<main>
+  <section id="fahrzeug" class="section">
+    <div class="container">
+      <h2>Über das Fahrzeug</h2>
+      <div class="fahrzeug__layout">
+        <p>
+          Der Mitsubishi 3000GT ist ein in Japan hergestellter Gran Tourismo Allrad-Sportwagen aus
+          den 90er Jahren des zwanzigsten Jahrhunderts (auch als "Mitsubishi GTO" bekannt). In
+          Deutschland ist er wie andere japanische Sportwagen aus den 90'er Jahren äusserst selten,
+          aber umso interessanter, weil es uns gibt: GT-Driver e.V.
+        </p>
+        <img
+          src="assets/red_black_d_640x4xx.jpg"
+          alt="Mitsubishi 3000GT in Rot und Schwarz"
+          class="fahrzeug__image"
+        />
+      </div>
+    </div>
+  </section>
+
+  <section id="verein" class="section section--alt">
+    <div class="container">
+      <div class="verein__heading">
+        <h2>Über den Verein</h2>
+        <img src="assets/scaled-logo-transparent-2.svg" alt="GT-Driver Logo" class="verein__logo" />
+      </div>
+      <p>
+        Unser Verein GT-Driver e.V. für Sportwagen-Fans nicht nur in Berlin bemüht sich um den
+        Erhalt der Mitsubishi 3000GT / Dodge Stealth Fahrzeuge und um die Unterstützung der Besitzer
+        in allen automobilen Lebenslagen. Hierzu zählen auch die aus USA nach Deutschland
+        importierten 3000gt vr4 Modelle.
+      </p>
+      <p>
+        Wir haben uns zur Aufgabe gemacht, Kraftfahrzeuge des Typs „Mitsubishi 3000GT“ und alle
+        Varianten und bauähnlichen Fabrikate (z.B. Dodge Stealth) als technisches Kulturgut zu
+        erhalten und deren sichere und umweltschonende Nutzung zu ermöglichen. Die Details können
+        unserer Satzung entnommen werden.
+      </p>
+
+      <div class="info-grid">
+        <mat-card class="card">
+          <mat-card-title>Was wir tun</mat-card-title>
+          <mat-card-content>
+            <ul>
+              <li>Regelmäßige Treffen und Events</li>
+              <li>Austausch von Wissen und Erfahrungen</li>
+              <li>Hilfe bei Teilen, Beschaffung und Weiterverkauf</li>
+              <li>Fortbildungen und technische Unterstützung</li>
+            </ul>
+          </mat-card-content>
+        </mat-card>
+
+        <mat-card class="card">
+          <mat-card-title>Seit wann?</mat-card-title>
+          <mat-card-content>
+            <p>
+              Der Verein besteht seit September 2012, ist eingetragen und als gemeinnützig
+              anerkannt.
+            </p>
+          </mat-card-content>
+        </mat-card>
+      </div>
+
+      <div class="cta-box">
+        <a mat-flat-button href="assets/satzung_V2_2012.pdf" download class="cta__btn-primary">
+          <mat-icon aria-hidden="true">download</mat-icon>
+          Satzung herunterladen
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="mitgliedschaft" class="section">
+    <div class="container">
+      <h2>Mitgliedschaft</h2>
+      <p>
+        Ab sofort können Sie sich um eine Mitgliedschaft bewerben, schicken Sie uns Ihren
+        ausgefüllten Aufnahme-Antrag per Post oder Email an die angegebene Adresse.
+      </p>
+      <p>Über die Aufnahme entscheidet der Vorstand auf seiner jeweils nächsten Sitzung.</p>
+
+      <div class="cta-box">
+        <a mat-flat-button href="assets/aufnahme-antrag.pdf" download class="cta__btn-primary">
+          <mat-icon aria-hidden="true">download</mat-icon>
+          Aufnahmeantrag herunterladen
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="links" class="section section--alt">
+    <div class="container">
+      <h2>Community und Links</h2>
+      <div class="link-grid">
+        <mat-card class="link-card" *ngFor="let link of communityLinks">
+          <a [href]="link.url" target="_blank" rel="noopener noreferrer">
+            <span>{{ link.label }}</span>
+            <mat-icon aria-hidden="true">{{ link.icon }}</mat-icon>
+          </a>
+        </mat-card>
+      </div>
+    </div>
+  </section>
+
+  <section id="kontakt" class="section">
+    <div class="container">
+      <h2>Kontakt</h2>
+
+      <div class="info-grid">
+        <mat-card class="card">
+          <mat-card-title>Vorstand</mat-card-title>
+          <mat-card-content>
+            <mat-list>
+              <mat-list-item *ngFor="let member of boardMembers">
+                <mat-icon matListItemIcon aria-hidden="true">person</mat-icon>
+                <span matListItemTitle>{{ member }}</span>
+              </mat-list-item>
+            </mat-list>
+          </mat-card-content>
+        </mat-card>
+
+        <mat-card class="card">
+          <mat-card-title>Anfragen</mat-card-title>
+          <mat-card-content>
+            <p>Alle Anfragen bitte an:</p>
+            <mat-nav-list>
+              <a mat-list-item href="mailto:vorstand@3000gt.org">
+                <mat-icon matListItemIcon aria-hidden="true">mail</mat-icon>
+                <span matListItemTitle>vorstand@3000gt.org</span>
+              </a>
+            </mat-nav-list>
+            <button mat-stroked-button type="button" (click)="copyEmail($event)">
+              <mat-icon aria-hidden="true">content_copy</mat-icon>
+              E-Mail kopieren
+            </button>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <p><strong>GT-Driver e.V.</strong></p>
+    <p>
+      <b
+        >Diese Demo-Version ist eine Basis für die spätere Vereinswebsite! Die offizielle aktuelle
+        Seite ist erreichbar unter</b
+      >
+      <a href="https://3000gt.org" target="_blank" rel="noopener noreferrer">dieser URL</a>
+    </p>
+    <p class="footer__small">
+      Diese Seite dient ausschließlich privaten Zwecken, sie ist kein Werbeangebot und steht in
+      keiner Beziehung zu Mitsubishi oder anderen Unternehmen. Alle auf dieser Seite genannten
+      Informationen sind nach bestem Wissen und Gewissen recherchiert, oder sie stellen die
+      persönliche Meinung des jeweiligen Autors dar. Der Verein GT-Driver e.V. übernimmt keine
+      Gewähr oder Haftung. Personenbezogene Daten werden nicht erhoben oder verwendet. Die
+      persönlichen Daten der Vereinsmitglieder werden vom Vereinsvorstand aufbewahrt und
+      ausschliesslich für Zwecke des Vereins und die Organisation des Vereinslebens verwendet. Bei
+      Ausscheiden aus dem Verein werden die Daten auf Wunsch gelöscht. Auskunft erteilt jederzeit
+      vorstand@3000gt.org.
+    </p>
+  </div>
+</footer>
