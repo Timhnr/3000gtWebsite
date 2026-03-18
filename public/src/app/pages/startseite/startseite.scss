@@ -91,15 +91,12 @@ body {
 .hero {
   background:
     linear-gradient(135deg, rgba(17, 24, 39, 0.9), rgba(31, 41, 55, 0.82)),
-    url('../../../../assets/scaled-logo-transparent.png') 50% -28% / min(34vw, 420px) no-repeat;
+    url('../../../../assets/scaled-logo-transparent.png') 58% 15% / min(34vw, 420px) no-repeat;
   color: white;
   padding: 5rem 0 4rem;
 
   &__content {
-    display: grid;
-    grid-template-columns: 1.85fr 1.15fr;
-    gap: 2rem;
-    align-items: center;
+    display: block;
   }
 
   &__text h1 {
@@ -129,12 +126,6 @@ body {
     flex: 0 0 auto;
   }
 
-  &__card {
-    background: rgba(255, 255, 255, 0.12);
-    border: 1px solid rgba(255, 255, 255, 0.18);
-    border-radius: 16px;
-    padding: 1.5rem;
-  }
 }
 
 .eyebrow {
@@ -214,17 +205,6 @@ h3 {
   border-radius: 14px;
   padding: 1.25rem;
   box-shadow: 0 8px 24px rgba(15, 23, 42, 0.05);
-}
-
-.hero__card mat-card-title {
-  font-size: 2rem;
-  line-height: 1.2;
-  font-weight: 700;
-  margin-bottom: 1rem;
-}
-
-.hero__card mat-card-content {
-  margin: 0;
 }
 
 .card mat-card-title {
