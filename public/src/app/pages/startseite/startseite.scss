@@ -50,7 +50,7 @@ body {
   position: sticky;
   top: 0;
   z-index: 10;
-  background: rgba(17, 24, 39, 0.95);
+  background: rgba(39, 58, 88, 0.93);
   backdrop-filter: blur(6px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 
@@ -90,7 +90,7 @@ body {
 
 .hero {
   background:
-    linear-gradient(135deg, rgba(17, 24, 39, 0.9), rgba(31, 41, 55, 0.82)),
+    linear-gradient(135deg, rgba(38, 58, 92, 0.72), rgba(58, 82, 120, 0.6)),
     url('../../../../assets/scaled-logo-transparent.png') 58% 15% / min(34vw, 420px) no-repeat;
   color: white;
   padding: 5rem 0 4rem;
@@ -259,6 +259,7 @@ h3 {
 
 .hero__btn-secondary {
   color: #ffffff !important;
+  border-width: 2px !important;
   border-color: rgba(255, 255, 255, 0.45) !important;
   transition:
     background-color 0.18s ease,
